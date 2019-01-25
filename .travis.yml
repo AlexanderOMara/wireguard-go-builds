@@ -5,3 +5,13 @@ go:
 
 script:
   - ./build.sh
+
+deploy:
+  provider: releases
+  api_key:
+    secure: $GITHUB_API_KEY
+  file:
+    - build/*.tar.xz*
+  skip_cleanup: true
+  on:
+    tags: true
