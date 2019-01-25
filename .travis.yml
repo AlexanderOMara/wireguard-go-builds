@@ -11,7 +11,8 @@ deploy:
   api_key:
     secure: $GITHUB_API_KEY
   file:
-    - build/*.tar.xz*
+    - build/*.tar.xz
+    - build/*.tar.xz.sha256
   skip_cleanup: true
   on:
     tags: true
