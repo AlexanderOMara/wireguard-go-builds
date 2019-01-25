@@ -10,9 +10,9 @@ deploy:
   provider: releases
   api_key:
     secure: $GITHUB_API_KEY
+  file_glob: true
   file:
-    - build/*.tar.xz
-    - build/*.tar.xz.sha256
+    - build/*.tar.xz*
   skip_cleanup: true
   on:
     tags: true
